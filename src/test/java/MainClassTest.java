@@ -3,7 +3,16 @@ import org.junit.Assert;
 
 public class MainClassTest extends MainClass
 {
-    //Тест 2: проверка что метод getClassNumber возвращает > 45
+    //Тест 3: проверка, ассерта проверяющего строку на наличие Hello/hello
+    @Test
+    public void testGetClassString()
+    {
+        MainClass classString = new MainClass();
+        String actual = classString.getClassString();
+        Assert.assertTrue("String doesn't contain text 'Hello' or 'hello'", (actual.contains("Hello")) || (actual.contains("hello")));
+    }
+
+    //Тест 2: проверка, что метод getClassNumber возвращает > 45
     @Test
     public void testGetClassNumber()
     {
